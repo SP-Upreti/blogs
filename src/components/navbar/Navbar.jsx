@@ -51,7 +51,7 @@ const AvatarMenue = () => {
     )
 }
 
-export default () => {
+export default function Navbar() {
 
     const [state, setState] = useState(false)
 
@@ -73,7 +73,7 @@ export default () => {
 
     return (
         <header className="text-base lg:text-sm">
-            <div className={`bg-white items-center gap-x-14  max-w-screen-xl mx-auto lg:flex  lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
+            <div className={`bg-white items-center gap-x-14 px-4 xl:px-0 max-w-screen-xl mx-auto lg:flex  lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
                     <a href="javascript:void(0)">
                         <img
