@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import { Link } from "react-router-dom";
 
 // Avtar with darpdown menu
 const AvatarMenue = () => {
@@ -73,16 +74,16 @@ export default function Navbar() {
 
     return (
         <header className="text-base lg:text-sm">
-            <div className={`bg-white items-center gap-x-14 px-4 xl:px-0 max-w-screen-xl mx-auto lg:flex  lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
+            <div className={`bg-white items-center gap-x-14 px-4  max-w-screen-xl mx-auto lg:flex  lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
-                    <a href="javascript:void(0)">
+                    <Link to='/'>
                         <img
                             src="https://www.floatui.com/logo.svg"
                             width={120}
                             height={50}
                             alt="Float UI logo"
                         />
-                    </a>
+                    </Link>
                     <div className="lg:hidden">
                         <button className="text-gray-500 hover:text-gray-800"
                             onClick={() => setState(!state)}
@@ -132,7 +133,7 @@ export default function Navbar() {
                 </div>
             </div>
             <nav className="border-b">
-                <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto  overflow-x-auto ">
+                <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto  overflow-x-auto px-4 ">
                     {
                         submenuNav.map((item, idx) => {
                             return (

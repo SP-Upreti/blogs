@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Trending() {
     return (
-        <div className='m-2  border w-full'>
+        <div className='  border w-full'>
             <div className="p-2">
                 <h2 className='flex  gap-2 items-center bg-slate-200/80 px-3 py-1 w-fit font-semibold rounded-md'>
                     <span>

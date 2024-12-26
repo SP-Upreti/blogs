@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 
-export default function Card() {
+export default function Card({ data }) {
     return (
         <Link to={'/details'}>
-            <div className='py-6 border-b pr-5 w-full hover:bg-slate-100 '>
+            <div className='py-6 border-b pr-5 w-full hover:bg-slate-100 px-4  '>
                 <ul className='flex gap-4 items-center'>
-                    <li className='bg-slate-200/70 px-2 rounded-full py-[1px]'>lifestyle</li>
+                    <li className='bg-slate-200/70 px-2 rounded-full py-[1px]'>{data.category}</li>
                     <li>●</li>
-                    <li>5min ago</li>
+                    <li>{data.time_posted}</li>
                 </ul>
                 <div className="mt-4 grid lg:grid-cols-4 gap-5">
                     <div className="lg:col-span-3 ">
-                        <h2 className='text-lg xl:text-xl font-semibold'>Lorem ipsum dolor sit amet con sectetur adipisicing elit. Verita tis, similique ?</h2>
-                        <p className='text-sm xl:text-base'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus sunt itaque, assumenda officiis, reprehenderit officia hic doloribus fugiat unde nemo voluptates! Nesciunt sunt fugit animi hic est, qui assumenda excepturi, veritatis ratione incidunt omnis eos ab. Labore vero voluptate, quae ullam obcaecati distinctio pariatur nesciunt! Enim labore magni laboriosam provident.</p>
+                        <h2 className='text-lg xl:text-xl font-semibold'>{data.title}</h2>
+                        <p className='text-sm xl:text-base'>{data.content}</p>
                     </div>
                     <div className="aspect-square h-32 w-full overflow-hidden bg-black">
                         <img src="https://wallpapers.com/images/hd/travel-4k-volcano-ynlmn2hmts0n7gsw.jpg" alt="" className='' />
@@ -23,7 +23,7 @@ export default function Card() {
                         <li className='h-8 w-8 sm:w-10 sm:h-10 rounded-full flex justify-center items-center'>
                             <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="" />
                         </li>
-                        <li><h2 className='font-semibold capitalize sm:text-lg'>Ram Bahadur</h2></li>
+                        <li><h2 className='font-semibold capitalize sm:text-lg'>{data.author}</h2></li>
                     </ul>
                     <ul className='flex gap-5 items-center'>
                         <li className=' flex justify-center items-center gap-2'>
