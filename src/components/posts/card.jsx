@@ -17,8 +17,8 @@ export default function Card() {
                     <img src="https://wallpapers.com/images/hd/travel-4k-volcano-ynlmn2hmts0n7gsw.jpg" alt="" className='' />
                 </div>
             </div>
-            <div className="flex justify-between gap-4 items-center mt-8 flex-wrap">
-                <ul className='flex gap-5 items-center'>
+            <div className="flex justify-between gap-5 items-center mt-8 flex-wrap">
+                <ul className='flex gap-2 sm:gap-5 items-center'>
                     <li className='h-8 w-8 sm:w-10 sm:h-10 rounded-full flex justify-center items-center'>
                         <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="" />
                     </li>
@@ -27,7 +27,7 @@ export default function Card() {
                 <ul className='flex gap-5 items-center'>
                     <li className=' flex justify-center items-center gap-2'>
                         <span>
-                            <svg width="24" height="24" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                            <svg width="24" height="24" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
                                 <title>comment-1</title>
                                 <desc>Created with Sketch Beta.</desc>
                                 <defs>
