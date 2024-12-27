@@ -73,7 +73,7 @@ export default function Navbar() {
 
 
     return (
-        <header className="text-base lg:text-sm">
+        <header className="text-base lg:text-sm z-50">
             <div className={`bg-white items-center gap-x-14 px-4  max-w-screen-xl mx-auto lg:flex  lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
                     <Link to='/'>
@@ -84,7 +84,7 @@ export default function Navbar() {
                             alt="Float UI logo"
                         />
                     </Link>
-                    <div className="lg:hidden">
+                    <div className="lg:hidden z-50 bg-white">
                         <button className="text-gray-500 hover:text-gray-800"
                             onClick={() => setState(!state)}
                         >
@@ -103,8 +103,8 @@ export default function Navbar() {
                         </button>
                     </div>
                 </div>
-                <div className={`nav-menu flex-1 pb-28 mt-8 overflow-y-auto max-h-screen lg:block lg:overflow-visible lg:pb-0 lg:mt-0 ${state ? "" : "hidden"}`}>
-                    <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0">
+                <div className={`nav-menu z-99 flex-1 pb-28 mt-8 overflow-y-auto max-h-screen lg:block lg:overflow-visible lg:pb-0 lg:mt-0 bg-white ${state ? "" : "hidden"} `}>
+                    <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0 bg-white">
                         <form onSubmit={(e) => e.preventDefault()} className='flex-1 items-center justify-start pb-4 lg:flex lg:pb-0'>
                             <div className="flex items-center gap-1 px-2 border rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,7 +116,7 @@ export default function Navbar() {
                                     className="w-full xl:w-[280px] px-2 py-2 text-gray-500 bg-transparent rounded-md outline-none"
                                 />
                             </div>
-                        </form>
+                        </form >
                         {
                             navigation.map((item, idx) => {
                                 return (
@@ -132,7 +132,7 @@ export default function Navbar() {
                     </ul>
                 </div>
             </div>
-            <nav className="border-b">
+            <nav className="border-b z-99">
                 <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto  overflow-x-auto px-4 ">
                     {
                         submenuNav.map((item, idx) => {

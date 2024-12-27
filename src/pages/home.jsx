@@ -1,6 +1,6 @@
-import Footer from "../footer/footer";
-import Navbar from "../navbar/Navbar";
-import Blogs from "../posts/blogs";
+import Footer from "../components/footer/footer";
+import Navbar from "../components/navbar/Navbar";
+import Blogs from "../components/posts/blogs"
 
 export default function Home() {
     return (

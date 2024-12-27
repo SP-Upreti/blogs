@@ -23,7 +23,9 @@ export default function Card({ data }) {
                         <li className='h-8 w-8 sm:w-10 sm:h-10 rounded-full flex justify-center items-center'>
                             <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="" />
                         </li>
-                        <li><h2 className='font-semibold capitalize sm:text-lg'>{data.author}</h2></li>
+                        <li>
+                            <h2 className='font-semibold capitalize sm:text-lg'>{data.author}</h2>
+                        </li>
                     </ul>
                     <ul className='flex gap-5 items-center'>
                         <li className=' flex justify-center items-center gap-2'>
