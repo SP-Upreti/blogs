@@ -1,26 +1,36 @@
 import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom";
+import ConfirmLogout from "../modals/confirm.logout";
 
 // Avtar with darpdown menu
 const AvatarMenue = () => {
 
-    const [state, setState] = useState(false)
-    const profileRef = useRef()
+    const [state, setState] = useState(false);
+    const [logoutModal, setLogoutModal] = useState(false);
+    const profileRef = useRef();
 
     const navigation = [
-        { title: "Dashboard", path: "javascript:void(0)" },
-        { title: "Analytics", path: "javascript:void(0)" },
-        { title: "Profile", path: "javascript:void(0)" },
-        { title: "Settings", path: "javascript:void(0)" },
+        { title: "Dashboard", path: "#" },
+        { title: "Analytics", path: "#" },
+        { title: "Profile", path: "#" },
+        { title: "Settings", path: "#" },
     ]
+    const toggleLogout = () => {
+        setLogoutModal(!logoutModal)
+    }
 
 
     useEffect(() => {
         const handleDropDown = (e) => {
-            if (!profileRef.current.contains(e.target)) setState(false)
-        }
-        document.addEventListener('click', handleDropDown)
-    }, [])
+            if (!profileRef.current.contains(e.target)) setState(false);
+        };
+        document.addEventListener('click', handleDropDown);
+
+        return () => {
+            document.removeEventListener('click', handleDropDown);
+        };
+    }, []);
+
 
     return (
         <div className="relative border-t lg:border-none">
@@ -34,7 +44,7 @@ const AvatarMenue = () => {
                     />
                 </button>
             </div>
-            <ul className={`bg-white top-14 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
+            <ul className={`bg-white top-14 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'} z-20`}>
                 {
                     navigation.map((item, idx) => (
                         <li key={idx}>
@@ -44,10 +54,15 @@ const AvatarMenue = () => {
                         </li>
                     ))
                 }
-                <button className="block w-full text-justify text-gray-600 hover:text-gray-900 border-t py-3 lg:hover:bg-gray-50 lg:p-3">
+                <button title="logout button" className="block w-full text-justify text-gray-600 hover:text-gray-900 border-t py-3 lg:hover:bg-gray-50 lg:p-3"
+                    onClick={toggleLogout}
+                >
                     Logout
                 </button>
             </ul>
+            {
+                logoutModal && (<ConfirmLogout onCancel={() => { setLogoutModal(false) }} />)
+            }
         </div>
     )
 }
@@ -56,24 +71,25 @@ export default function Navbar() {
 
     const [state, setState] = useState(false)
 
-    // Replace javascript:void(0) paths with your paths
+
+    // Replace # paths with your paths
     const navigation = [
-        { title: "Pro version", path: "javascript:void(0)" },
-        { title: "Upgrade", path: "javascript:void(0)" },
-        { title: "Support", path: "javascript:void(0)" },
+        { title: "Pro version", path: "#" },
+        { title: "Upgrade", path: "#" },
+        { title: "Support", path: "#" },
     ]
 
     const submenuNav = [
-        { title: "All", path: "javascript:void(0)" },
-        { title: "Integration", path: "javascript:void(0)" },
-        { title: "Billing", path: "javascript:void(0)" },
-        { title: "Transactions", path: "javascript:void(0)" },
-        { title: "Plans", path: "javascript:void(0)" },
+        { title: "All", path: "#" },
+        { title: "lifestyle", path: "#" },
+        { title: "technology", path: "#" },
+        { title: "health", path: "#" },
+        { title: "economy", path: "#" },
     ]
 
 
     return (
-        <header className="text-base lg:text-sm z-50">
+        <header className="text-base lg:text-sm z-99">
             <div className={`bg-white items-center gap-x-14 px-4  max-w-screen-xl mx-auto lg:flex  lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
                     <Link to='/'>
@@ -103,7 +119,7 @@ export default function Navbar() {
                         </button>
                     </div>
                 </div>
-                <div className={`nav-menu z-99 flex-1 pb-28 mt-8 overflow-y-auto max-h-screen lg:block lg:overflow-visible lg:pb-0 lg:mt-0 bg-white ${state ? "" : "hidden"} `}>
+                <div className={`nav-menu  flex-1 pb-28 mt-8 overflow-y-auto max-h-screen lg:block lg:overflow-visible lg:pb-0 lg:mt-0 bg-white ${state ? "" : "hidden"} `}>
                     <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0 bg-white">
                         <form onSubmit={(e) => e.preventDefault()} className='flex-1 items-center justify-start pb-4 lg:flex lg:pb-0'>
                             <div className="flex items-center gap-1 px-2 border rounded-lg">
@@ -132,14 +148,14 @@ export default function Navbar() {
                     </ul>
                 </div>
             </div>
-            <nav className="border-b z-99">
+            <nav className="border-b ">
                 <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto  overflow-x-auto px-4 ">
                     {
                         submenuNav.map((item, idx) => {
                             return (
                                 // Replace [idx == 0] with [window.location.pathname == item.path]
                                 <li key={idx} className={`py-1 ${idx == 0 ? "border-b-2 border-indigo-600" : ""}`}>
-                                    <a href={item.path} className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150">
+                                    <a href={item.path} className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150 capitalize">
                                         {item.title}
                                     </a>
                                 </li>
@@ -148,6 +164,7 @@ export default function Navbar() {
                     }
                 </ul>
             </nav>
+
         </header>
     )
 }

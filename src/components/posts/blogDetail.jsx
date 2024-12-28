@@ -1,55 +1,16 @@
-export default function Footer() {
-    const footerNavs = [
-        {
-            href: '#',
-            name: 'About'
-        },
-        {
-            href: '#',
-            name: 'Blog'
-        },
-        {
-            href: '#',
-            name: ''
-        },
-        {
-            href: '#',
-            name: 'Team'
-        },
-        {
-            href: '#',
-            name: 'Careers'
-        },
-
-        {
-            href: '#',
-            name: 'Suuport'
-        }
-    ]
+export default function BlogDetail() {
     return (
-        <footer className="text-gray-500 bg-white mt-4 px-4 py-5 max-w-screen-xl mx-auto md:px-8 border-t">
-            <div className="max-w-lg sm:mx-auto sm:text-center">
-                <img src="/logo.png" className="w-32 sm:mx-auto" />
-                <p className="leading-relaxed mt-2 text-[15px]">
-                    Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
-            <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
-                {
-                    footerNavs.map((item, idx) => (
-                        <li key={idx} className=" hover:text-gray-800">
-                            <a key={idx} href={item.href}>
-                                {item.name}
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-            <div className="mt-8 items-center justify-between sm:flex">
-                <div className="mt-4 sm:mt-0">
-                    &copy; 2025 Bblogs All rights reserved.
-                </div>
-                <div className="mt-6 sm:mt-0">
+        <div className=" px-4">
+            <div className="mb-4 flex justify-between items-center flex-wrap gap-5">
+                <ul className='flex gap-2 sm:gap-5 items-center'>
+                    <li className='h-8 w-8 sm:w-10 lg:w-14 lg:h-14 sm:h-10 rounded-full flex justify-center items-center'>
+                        <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="" />
+                    </li>
+                    <li>
+                        <h2 className='font-semibold capitalize text-xl'>Menuka Liver</h2>
+                    </li>
+                </ul>
+                <div className=" sm:mt-0">
                     <ul className="flex items-center space-x-4">
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
                             <a href="javascript:void()">
@@ -66,6 +27,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                         </li>
+
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
                             <a href="javascript:void()">
                                 <svg className="svg-icon w-6 h-6 text-blue-500" viewBox="0 0 20 20">
@@ -73,6 +35,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                         </li>
+
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
                             <a href="javascript:void()">
                                 <svg className="svg-icon w-6 h-6 text-red-600" viewBox="0 0 20 20">
@@ -83,13 +46,11 @@ export default function Footer() {
                     </ul>
                 </div>
             </div>
-            <style >{`
-                .svg-icon path,
-                .svg-icon polygon,
-                .svg-icon rect {
-                    fill: currentColor;
-                }
-            `}</style>
-        </footer>
+            <h2 className="font-semibold md:text-2xl">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Iure autem culpa inventore possimus minima fugiat?</h2>
+            <p className="md:text-lg mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quam repellat cupiditate quis fuga incidunt unde ullam! Aliquam explicabo fuga quam cum deleniti! Ratione deleniti officiis nihil nostrum sit in mollitia repellendus dolores rem harum sequi amet cum a corrupti, asperiores vero similique nulla unde recusandae laudantium? Exercitationem laboriosam eveniet ipsam est aut soluta. Nostrum illum deleniti numquam enim nisi amet minus odit libero nihil eveniet explicabo accusamus necessitatibus consequuntur, dolore totam, accusantium voluptatum cum sed, maiores a et qui fuga! Neque atque distinctio adipisci maxime hic necessitatibus delectus nostrum animi, cupiditate sequi temporibus quae sunt totam dolores laudantium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic natus, unde distinctio suscipit molestias fuga repellendus eaque, porro tempore quisquam optio repudiandae. Excepturi, quae! Eos omnis maiores impedit, quasi adipisci dolorum doloremque sequi explicabo inventore dolor, nihil officiis fugiat. Ex animi voluptates reiciendis magnam. Explicabo voluptatibus suscipit temporibus perspiciatis aperiam ipsum nulla sequi repudiandae error blanditiis culpa eaque cupiditate veritatis assumenda reprehenderit molestiae fugit, corrupti rerum! Aut omnis facilis ad mollitia magni ratione nobis, fugiat vero voluptates est facere odit commodi et error animi officia fuga. Aut, sit quos unde doloremque perferendis iure nemo odio corrupti sunt. Unde, consequuntur veritatis.</p>
+            <div className="mt-3">
+                <img src="https://wallpapers.com/images/hd/travel-4k-volcano-ynlmn2hmts0n7gsw.jpg" alt="" className='' />
+            </div>
+        </div>
     )
 }
