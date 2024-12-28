@@ -15,7 +15,7 @@ export default function Details() {
                                 <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="" />
                             </li>
                             <li>
-                                <h2 className='font-semibold capitalize sm:text-lg lg:text-xl'>Menuka Liver</h2>
+                                <h2 className='font-semibold capitalize text-xl'>Menuka Liver</h2>
                             </li>
                         </ul>
                         <div className=" sm:mt-0">
@@ -60,7 +60,7 @@ export default function Details() {
                         <img src="https://wallpapers.com/images/hd/travel-4k-volcano-ynlmn2hmts0n7gsw.jpg" alt="" className='' />
                     </div>
                 </div>
-                <div className="xl:w-[30%]  border p-4 mx-4 h-fit pb-4">
+                <div className="xl:w-[30%]  border p-2 mx-4 h-fit pb-4">
                     <div className="flex gap-5 justify-between items-center">
                         <h2 className="text-xl font-semibold">Recent Comments</h2>
                         {/* <button className="flex gap-1 items-center  font-semibold bg-blue-500 text-white px-2 pr-3 rounded-md py-1">
