@@ -33,7 +33,7 @@ const AvatarMenue = () => {
 
 
     return (
-        <div className="relative border-t lg:border-none z-50">
+        <div className="relative border-t lg:border-none z-50 bg-white">
             <div className="">
                 <button ref={profileRef} className="hidden w-10 h-10 outline-none rounded-full ring-offset-2 ring-gray-200 lg:focus:ring-2 lg:block"
                     onClick={() => setState(!state)}
