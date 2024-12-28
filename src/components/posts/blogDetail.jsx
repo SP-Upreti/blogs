@@ -1,6 +1,6 @@
 export default function BlogDetail() {
     return (
-        <div className=" px-4">
+        <div className=" px-4" id="read">
             <div className="mb-4 flex justify-between items-center flex-wrap gap-5">
                 <ul className='flex gap-2 sm:gap-5 items-center'>
                     <li className='h-8 w-8 sm:w-10 lg:w-14 lg:h-14 sm:h-10 rounded-full flex justify-center items-center'>

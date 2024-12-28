@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Card({ data }) {
     return (
-        <Link to={'/details'}>
+        <Link to={'/details#read'}>
             <div className='py-6 border-b pr-5 w-full hover:bg-slate-100 px-4  '>
                 <ul className='flex gap-4 items-center'>
                     <li className='bg-slate-200/70 px-2 rounded-full py-[1px]'>{data.category}</li>
