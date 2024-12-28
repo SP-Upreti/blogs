@@ -20,7 +20,7 @@ export default function ConfirmLogout({ onCancel }) {
     )
     return (
         <div ref={divRef} className="fixed z-[999] top-0 right-0 h-dvh w-dvw bg-black/50 flex justify-center items-center">
-            <div className="w-60 p-6 px-4 bg-white rounded-md">
+            <div className="w-full  sm:w-60 p-6 px-4 bg-white rounded-md">
                 <h2 className="text-2xl font-semibold">Confirm Logout ?</h2>
                 <div className="mt-4 flex gap-2 items-center">
                     <button className="px-4 text-lg border py-1 rounded-md font-semibold border-slate-400" title="click here to close box" onClick={onCancel}>cancel</button>
