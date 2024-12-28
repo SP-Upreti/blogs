@@ -6,7 +6,7 @@ export default function Details() {
     return (
         <>
             <Navbar />
-            <div className="flex max-w-7xl py-4 gap-4 mx-auto flex-col xl:flex-row  relative -z-10 ">
+            <div className="flex max-w-7xl py-4 gap-4 mx-auto flex-col xl:flex-row  relative  ">
 
                 <div className="xl:w-[70%] px-4">
                     <div className="mb-4 flex justify-between items-center flex-wrap gap-5">

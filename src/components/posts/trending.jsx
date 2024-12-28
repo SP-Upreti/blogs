@@ -119,19 +119,8 @@ function Card() {
 
 function Announcement() {
     return (
-        <div className="text-white h-[120px] bg-purple-500 flex flex-col justify-center p-4 items-center">
-            <div className="flex text-center">
-                <div className="w-[70%] text-lg">
-                    <span className='text-xl font-semibold text-center '> 50% </span>discount on this chritmas
-                    <div className="bg-white w-fit text-purple-500 font-semibold text-base  px-2 py-1 rounded-md mx-auto mt-3">
-                        <button className='capitalize'>claim now</button>
-                    </div>
-                </div>
-                <div className="w-28">
-                    <img src="https://png.pngtree.com/png-clipart/20240830/original/pngtree-in-hand-latest-model-mobile-phone-png-image_15884437.png" alt="" className='w-28' />
-                </div>
-            </div>
-
+        <div className="text-white   flex flex-col justify-center  items-center">
+            <img src="/announcement.svg" alt="" />
         </div>
     )
 }
