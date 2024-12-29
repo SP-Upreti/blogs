@@ -12,7 +12,7 @@ const AvatarMenue = () => {
     const navigation = [
         { title: "Dashboard", path: "#" },
         { title: "Analytics", path: "#" },
-        { title: "Profile", path: "#" },
+        { title: "Profile", path: "/profile" },
         { title: "Settings", path: "#" },
     ]
     const toggleLogout = () => {
