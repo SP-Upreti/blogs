@@ -11,7 +11,7 @@ export default function CardHorizontal({ data, image = false }: { data: Post, im
         <Card className={`gap-4 shadow-none pt-10 ${image ? "lg:grid" : ""} grid-cols-3 `}>
             {image && <CardHeader className='p-0'>
                 <div className="w-[266px] h-[180px] relative">
-                    <Image src={data.coverImage} fill alt={data.slug} className='object-cover ' />
+                    <Image quality={50} src={data.coverImage} fill alt={data.slug} className='object-cover ' />
                 </div>
             </CardHeader>}
             <div className={`col-span-2 ${image ? "md:pl-4" : ""}`}>
