@@ -11,7 +11,7 @@ export default function VerticalCard({ data }: { data: Post }) {
     return (
         <Card className='gap-4 m-0 shadow-none'>
             <CardHeader className='p-0'>
-                <Badge className='bg-primary/50'>{data.category.name}</Badge>
+                <Badge className='bg-transparent border border-primary text-primary'>{data.category.name}</Badge>
                 <h1 className='text-xl font-semibold xl:text-2xl'>{data.title}</h1>
             </CardHeader>
             <CardContent className='px-0'>
