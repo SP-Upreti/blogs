@@ -1,3 +1,4 @@
+import { Bike, BriefcaseBusiness, Bus, ChefHat, Cpu, Shirt, Stethoscope } from "lucide-react";
 import { Author, Category, Post, Tag } from "./types";
 
 export const mockAuthors: Author[] = [
@@ -35,44 +36,58 @@ export const mockCategories: Category[] = [
     id: '1',
     name: 'Lifestyle',
     slug: 'lifestyle',
-    count: 45
+    count: 45,
+    icon: <Bike />
   },
   {
     id: '2',
     name: 'Travel',
     slug: 'travel',
-    count: 35
+    count: 35,
+    icon: <Bus />
   },
   {
     id: '3',
     name: 'Food',
     slug: 'food',
-    count: 25
+    count: 25,
+    icon: <ChefHat />
   },
   {
     id: '4',
     name: 'Technology',
     slug: 'technology',
-    count: 18
+    count: 18,
+    icon: <Cpu />
   },
   {
     id: '5',
     name: 'Fashion',
     slug: 'fashion',
-    count: 15
+    count: 15,
+    icon: <Shirt />
   },
   {
     id: '6',
     name: 'Business',
     slug: 'business',
-    count: 12
+    count: 12,
+    icon: <BriefcaseBusiness />
   },
   {
     id: '7',
     name: 'Health',
     slug: 'health',
-    count: 10
-  }
+    count: 10,
+    icon: <Stethoscope />
+  },
+  {
+    id: '3',
+    name: 'Food',
+    slug: 'food',
+    count: 25,
+    icon: <ChefHat />
+  },
 ];
 
 export const mockTags: Tag[] = [
@@ -185,5 +200,19 @@ export const mockPosts: Post[] = [
     tags: [mockTags[7], mockTags[6]],
     readingTime: 5,
     views: 654
-  }
+  },
+  {
+    id: '1',
+    title: 'I Created A Developer Rap Video - Here\'s What I Learned',
+    slug: 'i-created-a-developer-rap-video',
+    excerpt: 'Did you come here for something in particular or just general browsing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard.',
+    content: 'Full content goes here...',
+    coverImage: 'https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    publishedAt: new Date('2023-12-15'),
+    author: mockAuthors[0],
+    category: mockCategories[3],
+    tags: [mockTags[3], mockTags[5]],
+    readingTime: 5,
+    views: 1250
+  },
 ];

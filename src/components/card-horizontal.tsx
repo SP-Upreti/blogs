@@ -18,7 +18,7 @@ export default function CardHorizontal({ data, image = false }: { data: Post, im
                 <CardDescription className='grid grid-cols-3 gap-2 '>
                     <div className="col-span-3 space-y-2">
                         <Badge className='bg-transparent border border-primary text-primary'>{data.category.name}</Badge>
-                        <h1 className='text-xl text-gray-800 font-semibold xl:text-xl'>{data.title}</h1>
+                        <h1 className='text-xl text-gray-800 dark:text-gray-100 font-semibold xl:text-xl'>{data.title}</h1>
                     </div>
                     <div className="flex gap-2 items-center">
                         <Avatar>
