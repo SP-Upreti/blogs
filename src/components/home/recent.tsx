@@ -15,7 +15,7 @@ export default function Recent() {
         <section className='w-full'>
             <div className="space-y-10">
                 <h1 className='text-xl space-x-2 uppercase  font-semibold'> <Badge className='text-lg'>Recently</Badge> Posted</h1>
-                <div className="grid grid-cols-4 gap-4 lg:gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
                     {mockPosts.map((data, idx) => (
                         <VerticalCard data={data} key={idx} />
                     ))}

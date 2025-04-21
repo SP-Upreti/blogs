@@ -1,8 +1,9 @@
 "use client"
 import React, { FormEvent, useState } from 'react'
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter } from './ui/dialog'
-import { DialogTitle } from '@radix-ui/react-dialog'
-import { Loader } from 'lucide-react'
+import { Dialog, DialogTrigger, DialogContent } from './ui/dialog'
+import { Search } from 'lucide-react'
+import { Input } from './ui/input'
+import { Button } from './ui/button'
 
 export default function SearchBar() {
     const [open, setOpen] = useState(false)
@@ -29,16 +30,13 @@ export default function SearchBar() {
             </DialogTrigger>
             <DialogContent
                 onInteractOutside={(e) => e.preventDefault()} // This blocks outside click close
-                className=" max-w-4xl p-2 px-4 sm:p-auto ">
-                <DialogHeader className=''>
-                    <DialogTitle className='font-semibold text-lg text-start'>Search Results</DialogTitle>
-                </DialogHeader>
-                <div className=" min-h-32 md:min-h-96 flex justify-center items-center gap-4">
-                    <Loader className='animate-spin' /> Searching Results
-                </div>
-                <DialogFooter>
-                    78 results found
-                </DialogFooter>
+                className=" max-w-4xl  p-2 px-4 sm:p-auto ">
+                <DialogContent className='max-w-4xl'>
+                    <div className="relative mt-6">
+                        <Button className='absolute right-0'><Search /></Button>
+                        <Input placeholder='Search blogs' />
+                    </div>
+                </DialogContent>
             </DialogContent>
         </Dialog>
 

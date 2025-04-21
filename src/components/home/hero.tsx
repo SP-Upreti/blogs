@@ -9,13 +9,13 @@ export default function Hero() {
 
     return (
         <>
-            <section className="py-6">
-                <div className="max-w-screen-xl mx-auto text-gray-600 dark:text-gray-300 gap-x-8 items-center justify-between overflow-hidden md:flex px-4 lg:px-0">
-                    <div className="flex-none space-y-5 px-4  sm:max-w-lg md:px-0 lg:max-w-xl">
+            <section className="md:py-6">
+                <div className="max-w-screen-xl mx-auto text-gray-600 dark:text-gray-300 sm:gap-x-8 items-center justify-between overflow-hidden flex-col-reverse md:flex-row  flex sm:px-4 gap-5 md:gap-0 lg:px-0">
+                    <div className="flex-none space-y-2  md:space-y-5 sm:px-4  sm:max-w-lg md:px-0 lg:max-w-xl">
                         <h1 className="text-sm text-primary  font-medium">
                             Join thousands of curious minds
                         </h1>
-                        <h2 className="text-4xl text-gray-800 dark:text-white font-extrabold md:text-5xl">
+                        <h2 className="text-3xl sm:text-4xl text-gray-800 dark:text-white font-extrabold md:text-5xl">
                             Discover stories, ideas & insights that matter
                         </h2>
                         <p>
@@ -33,7 +33,7 @@ export default function Hero() {
                             </a>
                         </div>
                     </div>
-                    <div className="flex-none mt-14 md:mt-0 w-xl md:max-w-2xl ">
+                    <div className="flex-none  w-xl md:max-w-2xl ">
 
                         <HeroSlider />
                     </div>
@@ -45,7 +45,7 @@ export default function Hero() {
                                 Explore with Categories
                             </h3>
                         </div>
-                        <div className="grid grid-cols-4 gap-4 lg:gap-6 mt-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6 mt-6">
                             {mockCategories.map((data, idx) => (
                                 <Card key={idx} className="bg-primary/10">
                                     <CardContent className="flex flex-col gap-2  h-[120px] justify-center items-center">
