@@ -10,6 +10,7 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
+import Link from 'next/link'
 export default function Recent() {
     return (
         <section className='w-full'>
@@ -17,7 +18,7 @@ export default function Recent() {
                 <h1 className='text-xl space-x-2 uppercase  font-semibold'> <Badge className='text-lg'>Recently</Badge> Posted</h1>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
                     {mockPosts.map((data, idx) => (
-                        <VerticalCard data={data} key={idx} />
+                        <Link key={idx} href={"/blogs/id"}><VerticalCard data={data} /></Link>
                     ))}
                 </div>
                 <Pagination className=''>

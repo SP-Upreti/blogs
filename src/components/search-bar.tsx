@@ -4,6 +4,8 @@ import { Dialog, DialogTrigger, DialogContent } from './ui/dialog'
 import { Search } from 'lucide-react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
+import { ScrollArea } from './ui/scroll-area'
+import { mockPosts } from '@/lib/mock-data'
 
 export default function SearchBar() {
     const [open, setOpen] = useState(false)
@@ -30,11 +32,22 @@ export default function SearchBar() {
             </DialogTrigger>
             <DialogContent
                 onInteractOutside={(e) => e.preventDefault()} // This blocks outside click close
-                className=" max-w-4xl  p-2 px-4 sm:p-auto ">
-                <DialogContent className='max-w-4xl'>
-                    <div className="relative mt-6">
-                        <Button className='absolute right-0'><Search /></Button>
-                        <Input placeholder='Search blogs' />
+                className=" max-w-4xl    px-4 sm:p-auto ">
+                <DialogContent className='max-w-4xl '>
+                    <div className="relative mt-4">
+                        <Button className='absolute right-0 h-full w-12'><Search /></Button>
+                        <Input placeholder='Search blogs' autoFocus className='py-5 focus:border-none focus:ring-primary focus:outline-none' />
+                    </div>
+                    <div className="">
+                        <h2 className='text-lg font-semibold text-primary mb-2'>Suggested Blogs</h2>
+                        <ScrollArea className='h-[300px]  w-full'>
+                            {mockPosts.map((data, idx) => (
+                                <div className="bg-gray-100 p-2 rounded-sm mb-2.5" key={idx}>
+                                    <h1 className='text-lg font-medium'>{data.title}</h1>
+                                    <p>{data.excerpt}</p>
+                                </div>
+                            ))}
+                        </ScrollArea>
                     </div>
                 </DialogContent>
             </DialogContent>

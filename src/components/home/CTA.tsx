@@ -7,7 +7,7 @@ import { mockTags } from '@/lib/mock-data'
 export default function CTA() {
     return (
         <div className='lg:grid grid-cols-3 gap-4 '>
-            <div className="p-4   justify-center dark:bg-transparent dark:border bg-primary/20 col-span-2 flex flex-col gap-2 items-center">
+            <div className="p-4   justify-center dark:bg-transparent dark:border bg-primary/20 col-span-2 flex flex-col gap-4 items-center">
                 <h1 className='text-xl font-semibold capitalize text-primary'>Share Your Thoughts with People</h1>
                 <Button>Write On Notebook <PenBoxIcon /></Button>
             </div>
